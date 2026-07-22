@@ -46,7 +46,7 @@ jobs:
           exit 1
 
       - name: Restore nixpkgs cache
-        uses: actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5
         with:
           path: ${{ env.NIXPKGS_LOCATION }}
           key: ${{ env.CACHE_KEY }}-${{ github.run_id }}
@@ -203,7 +203,7 @@ jobs:
     steps:
       - name: Restore nixpkgs cache
         id: cache
-        uses: actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5
         with:
           path: ${{ env.NIXPKGS_LOCATION }}
           key: ${{ env.CACHE_KEY }}-${{ github.run_id }}
@@ -250,7 +250,7 @@ jobs:
           NIXPKGS_REPO_URL: ${{ needs.get-github-info.outputs.nixpkgs_repo_url }}
 
       - name: Save nixpkgs cache
-        uses: actions/cache/save@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5
+        uses: actions/cache/save@caa296126883cff596d87d8935842f9db880ef25 # v5
         with:
           path: ${{ env.NIXPKGS_LOCATION }}
           key: ${{ env.CACHE_KEY }}-${{ github.run_id }}
